@@ -5,7 +5,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import store from '../src/reducers/index';
+import store from './reducers/index';
 
 ReactDOM.render(
   <React.StrictMode>
