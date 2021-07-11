@@ -1,6 +1,7 @@
 // import { useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NavBar from './components/presentation/NavBar';
+import Home from './components/containers/Home';
 import Footer from './components/presentation/Footer';
 import ComicList from './components/presentation/ComicList';
 import ComicDetail from './components/presentation/ComicDetail';
@@ -33,6 +34,7 @@ const App = () => (
       <Footer />
     </BrowserRouter> */}
     <NavBar />
+    <Home />
     <Footer />
   </>
 );
