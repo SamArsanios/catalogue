@@ -1,18 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-const NavBar = () => {
-  return (
-    <div>
-      <nav className="navbar navbar-light bg-dark mb-5">
-        <div className="container">
-          <div className="navbar-header">
-            <a className="navbar-brand text-white text-lg brand-text">Movies Catalogue</a>
-          </div>
-          <ul className="navbar-nav ml-auto"></ul>
+const NavBar = () => (
+  <div>
+    <nav className="navbar navbar-light bg-dark mb-5">
+      <div className="container">
+        <div className="navbar-header">
+          <span className="navbar-brand text-white text-lg brand-text">Movies Catalogue</span>
         </div>
-      </nav>
-    </div>
-  )
-}
+        <ul className="navbar-nav ml-auto" />
+      </div>
+    </nav>
+  </div>
+);
 
 export default NavBar;
