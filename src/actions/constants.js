@@ -3,7 +3,7 @@
 // const FETCH_API_REQUEST = 'FETCH_API_REQUEST';
 const SEARCH_FILM = 'SEARCH_FILM';
 const FETCH_FILMS = 'FETCH_FILMS';
-
+const FETCH_FILM_DETAILS = 'FETCH_FILM_DETAILS';
 // const fetchApiRequest = () => ({
 //   type: FETCH_API_REQUEST,
 // });
@@ -18,7 +18,7 @@ const FETCH_FILMS = 'FETCH_FILMS';
 //   payload: error,
 // });
 
-export { SEARCH_FILM, FETCH_FILMS };
+export { SEARCH_FILM, FETCH_FILMS, FETCH_FILM_DETAILS };
 // FETCH_API_SUCCESS,
 // FETCH_API_FAILURE,
 // FETCH_API_REQUEST,

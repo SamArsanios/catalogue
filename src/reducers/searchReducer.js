@@ -1,4 +1,4 @@
-import { SEARCH_FILM, FETCH_FILMS } from '../actions/constants';
+import { SEARCH_FILM, FETCH_FILMS, FETCH_FILM_DETAILS } from '../actions/constants';
 
 const initialState = {
   text: '',
@@ -19,6 +19,11 @@ const searchReducer = (state = initialState, action) => {
       return {
         ...state,
         films: action.payload,
+      };
+    case FETCH_FILM_DETAILS:
+      return {
+        ...state,
+        film: action.payload,
       };
     default:
       return state;

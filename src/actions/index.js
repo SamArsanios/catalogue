@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { SEARCH_FILM, FETCH_FILMS } from './constants';
+import { SEARCH_FILM, FETCH_FILMS, FETCH_FILM_DETAILS } from './constants';
 // import apiKey from '../apiKey';
 
 // import {
@@ -43,4 +43,13 @@ const fetchFilms = (text) => (dispatch) => {
     .catch((error) => console.log(console.log(error)));
 };
 
-export { searchFilm, fetchFilms };
+const fetchFilmDetails = (id) => (dispatch) => {
+  axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&i=${id}`)
+    .then((response) => dispatch({
+      type: FETCH_FILM_DETAILS,
+      payload: response.data,
+    }))
+    .catch((error) => console.log(console.log(error)));
+};
+
+export { searchFilm, fetchFilms, fetchFilmDetails };
