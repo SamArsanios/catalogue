@@ -1,10 +1,12 @@
+/* eslint-disable */
 // import { useEffect } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+// import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NavBar from './components/presentation/NavBar';
 import Home from './components/containers/Home';
 import Footer from './components/presentation/Footer';
-import ComicList from './components/presentation/ComicList';
-import ComicDetail from './components/presentation/ComicDetail';
+// import ComicList from './components/presentation/ComicList';
+// import ComicDetail from './components/presentation/ComicDetail';
+
 // useEffect(() => {
 //   const apiKey = 'e5567719e7a9a7711ba2f297c92dcdbc';
 //   const hash = '2329c78c574a4a57c85382a88fe60f63';
