@@ -1,4 +1,7 @@
-import { SEARCH_FILM } from './constants';
+import axios from 'axios';
+import { SEARCH_FILM, FETCH_FILMS } from './constants';
+import apiKey from '../apiKey';
+
 // import {
 //   fetchApiRequest, fetchApiSuccess, fetchApiFailure,
 // } from './constants';
@@ -26,8 +29,17 @@ import { SEARCH_FILM } from './constants';
 const searchFilm = (text) => (dispatch) => {
   dispatch({
     type: SEARCH_FILM,
-    payload: text
+    payload: text,
   });
 };
+// http://www.omdbapi.com/?i=tt3896198&apikey=6399a366
+const fetchFilms = (text) => (dispatch) => {
+  axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&s=${text}`)
+    .then((response) => dispatch({
+      type: FETCH_FILMS,
+      payload: response.data.Search,
+    }))
+    .catch((error) => console.log(console.log(error)));
+};
 
-export default searchFilm;
+export { searchFilm, fetchFilms };
