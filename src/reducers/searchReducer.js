@@ -2,9 +2,9 @@ import { SEARCH_FILM, FETCH_FILMS } from '../actions/constants';
 
 const initialState = {
   text: '',
-  movies: [],
+  films: [],
   loading: false,
-  movie: [],
+  film: [],
 };
 
 const searchReducer = (state = initialState, action) => {

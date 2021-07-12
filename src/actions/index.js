@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { SEARCH_FILM, FETCH_FILMS } from './constants';
-import apiKey from '../apiKey';
+// import apiKey from '../apiKey';
 
 // import {
 //   fetchApiRequest, fetchApiSuccess, fetchApiFailure,
@@ -25,6 +25,7 @@ import apiKey from '../apiKey';
 // };
 
 // export default fetchComics;
+const apiKey = '6399a366';
 
 const searchFilm = (text) => (dispatch) => {
   dispatch({

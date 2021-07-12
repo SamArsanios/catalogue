@@ -1,6 +1,6 @@
 /* eslint-disable */
 // import { useEffect } from 'react';
-// import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import NavBar from './components/presentation/NavBar';
 import Home from './components/containers/Home';
 import Footer from './components/presentation/Footer';
@@ -35,9 +35,11 @@ const App = () => (
       </Switch>
       <Footer />
     </BrowserRouter> */}
-    <NavBar />
-    <Home />
-    <Footer />
+    <BrowserRouter>
+      <NavBar />
+      <Home />
+      <Footer />
+    </BrowserRouter>
   </>
 );
 export default App;
