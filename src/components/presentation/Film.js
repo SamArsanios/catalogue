@@ -1,7 +1,6 @@
 /* eslint-disable */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
 export class Film extends Component {
   render() {
     const { film } = this.props;
@@ -18,6 +17,10 @@ export class Film extends Component {
             Film Details
               <i className="fas fa-chevron-right" />
           </Link>
+          {/* <span className="btn btn-warning mt-auto">
+            Film Details
+              <i className="fas fa-chevron-right" />
+          </span>  */}
         </div>
       </div>
     );

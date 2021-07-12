@@ -1,8 +1,9 @@
 /* eslint-disable */
 // import { useEffect } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import NavBar from './components/presentation/NavBar';
 import Home from './components/containers/Home';
+import FilmDetails from './components/presentation/FilmDetails';
 import Footer from './components/presentation/Footer';
 // import ComicList from './components/presentation/ComicList';
 // import ComicDetail from './components/presentation/ComicDetail';
@@ -37,7 +38,8 @@ const App = () => (
     </BrowserRouter> */}
     <BrowserRouter>
       <NavBar />
-      <Home />
+      <Route component={Home} exact path="/" />
+      <Route component={FilmDetails} exact path="/film/:id" />
       <Footer />
     </BrowserRouter>
   </>
