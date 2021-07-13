@@ -3,30 +3,29 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Film from '../presentation/Film';
 
-export class FilmContainer extends Component {
-  constructor(props) {
-    super(props)
-  }
+// export class FilmContainer extends Component {
+//   constructor(props) {
+//     super(props)
+//   }
+const FilmContainer = (props) => {
 
-  render() {
-    const { films, filter } = this.props;
+  const { films, filter } = props;
 
-    const filterFilms = (films, filter) => (filter === 'All' ? films
-      : films.filter((film) => film.category === filter));
+  const filterFilms = (films, filter) => (filter === 'All' ? films
+    : films.filter((film) => film.category === filter));
 
-    console.log(films);
-    const filteredFilms = filterFilms(films, filter);
+  console.log(films);
+  const filteredFilms = filterFilms(films, filter);
 
-    let content = '';
+  let content = '';
 
-    content = films.Response == 'True'
-      ? filteredFilms.Search.map((film, index) => <Film key={index} film={film} />) : 'Sorry, Film not available';
-    return (
-      <div className="row">
-        {content}
-      </div>
-    );
-  }
+  content = films.Response == 'True'
+    ? filteredFilms.Search.map((film, index) => <Film key={index} film={film} />) : 'Sorry, Film not available';
+  return (
+    <div className="row">
+      {content}
+    </div>
+  );
 }
 
 const mapStateToProps = (state) => ({
