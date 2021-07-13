@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {
-  SEARCH_FILM, FETCH_FILMS, FETCH_FILM_DETAILS, LOADING,
+  SEARCH_FILM, FETCH_FILMS, FETCH_FILM_DETAILS, LOADING, FILTER_FILM,
 } from './constants';
 // import apiKey from '../apiKey';
 
@@ -58,6 +58,11 @@ const setLoading = () => ({
   type: LOADING,
 });
 
+const filterFilm = (filter) => ({
+  type: FILTER_FILM,
+  payload: filter,
+});
+
 export {
-  searchFilm, fetchFilms, fetchFilmDetails, setLoading,
+  searchFilm, fetchFilms, fetchFilmDetails, setLoading, filterFilm,
 };
