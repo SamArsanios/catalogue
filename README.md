@@ -1,37 +1,37 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Calculator
+# Calculator App
 
-A calculator app where you can execute the 4 basic operations and calculate percentages.
+A calculator app where you can calculate the 4 basic Math operations for a company called Math Magicians.
 
-![](./docs/screenshot.png)
+<!-- ![](./docs/screenshot.png) -->
 
 ## Built With
 
 - React.js
 
-## [Live Link](https://calculator-patrick.herokuapp.com/)
+## [Live Link](https://sam-calculator-app.herokuapp.com/)
 
 ## Getting Started
 
-To get a local copy running
+To get a local copy up and running follow these simple example steps.
 
-- `git clone git@github.com:patrick-angelos/calculator.git`
+- `git clone git@github.com:SamArsanios/calculator-app.git`
 - `cd calculator`
 - `npm install`
-- `npm run start`
+- `npm start`
 
 To test the logic files
 
-- `npm run test`
+- `npm test`
 
 ## Author
 
-👤 **Patrikis Angelos**
+👤 **Samson Kibrom**
 
-- GitHub: [@patrick-angelos](https://github.com/patrick-angelos)
-- Twitter: [@AngelosPatrikis](https://twitter.com/AngelosPatrikis)
-- LinkedIn: [Angelos Patrikis](https://www.linkedin.com/in/angelos-patrikis-a590a61b5/)
+- GitHub: [@SamArsanios](https://github.com/SamArsanios)
+- Twitter: [@SamArsanios](https://twitter.com/SamArsanios)
+- LinkedIn: [Samson Kibrom](https://www.linkedin.com/in/samson-kibrom/)
 
 ## 🤝 Contributing
 
