@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { searchFilm, fetchFilms } from '../../actions/index';
+import { searchFilm, fetchFilms, setLoading } from '../../actions/index';
 
 class SearchForm extends Component {
   // state = {}
@@ -12,6 +12,7 @@ class SearchForm extends Component {
   onSubmit = (e) => {
     e.preventDefault();
     this.props.fetchFilms(this.props.text);//eslint-disable
+    this.props.setLoading();
   }
 
   render() {
@@ -37,4 +38,4 @@ const mapStateToProps = (state) => ({
   text: state.films.text,
 });
 
-export default connect(mapStateToProps, { searchFilm, fetchFilms })(SearchForm);
+export default connect(mapStateToProps, { searchFilm, fetchFilms, setLoading })(SearchForm);

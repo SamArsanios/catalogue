@@ -40,7 +40,7 @@ const App = () => (
       <NavBar />
       <Route component={Home} exact path="/" />
       <Route component={FilmDetails} exact path="/film/:id" />
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   </>
 );

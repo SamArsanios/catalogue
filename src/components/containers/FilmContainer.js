@@ -12,8 +12,8 @@ export class FilmContainer extends Component {
     const { films } = this.props;
     let content = '';
 
-    console.log(this.props);
-    content = films.length > 0 ? films.map((film, index) => <Film key={index} film={film} />) : null;
+    content = films.Response == 'True'
+      ? films.Search.map((film, index) => <Film key={index} film={film} />) : 'Sorry, Film not available';
     return (
       <div className="row">
         {content}
