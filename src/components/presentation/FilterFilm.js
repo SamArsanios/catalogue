@@ -5,7 +5,7 @@ import React from 'react';
 
 const FilterFilm = (props) => {
   const { handleFilterChange } = props;
-  const genres = ['All', 'Action', 'Adventure', 'Comedy'];
+  const genres = ['All', 'Action', 'Adventure', 'Animation', 'Comedy', 'Documentary', 'Drama', 'Horror', 'Mystery', 'Romance', 'Thriller'];
 
   return (
     <div>

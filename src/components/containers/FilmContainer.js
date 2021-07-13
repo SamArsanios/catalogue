@@ -12,7 +12,7 @@ const FilmContainer = (props) => {
   const { films, filter } = props;
 
   const filterFilms = (films, filter) => (filter === 'All' ? films
-    : films.filter((film) => film.category === filter));
+    : films.filter((film) => film.genre === filter));
 
   console.log(films);
   const filteredFilms = filterFilms(films, filter);
