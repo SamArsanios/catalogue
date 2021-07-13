@@ -1,44 +1,64 @@
 /* eslint-disable */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchFilmDetails } from '../../actions/index';
-
+import { fetchFilmDetails, setLoading } from '../../actions/index';
+import { Link } from 'react-router-dom';
 export class FilmDetails extends Component {
   componentDidMount() {
     this.props.fetchFilmDetails(this.props.match.params.id);
-    // this.props.setLoading();
+    this.props.setLoading();
   }
 
   render() {
-    return (
-      <>
+    const { loading, film } = this.props;
+
+    let filmContent = (
+      <div className="container">
         <div className="row" >
           <div className="col-md-4 card card-body">
-            <img src="#film-poster" className="thumnail" alt="Poster" />
+            <img src={film.Poster} className="thumnail" alt="Poster" />
           </div>
           <div className="col-md-8">
-            <h2 className="mb-4">Film Title</h2>
+            <h2 className="mb-4">{film.Title}</h2>
             <ul className="list-group">
               <li className="list-group-item">
-                <strong>Genre:</strong>Film Genre
+                <strong>Plot: </strong>{film.Plot}
               </li>
               <li className="list-group-item">
-                <strong>Released:</strong>Film Released
+                <strong>Genre: </strong>{film.Genre}
               </li>
               <li className="list-group-item">
-                <strong>Rated:</strong>Film Rated
+                <strong>Released: </strong>{film.Released}
               </li>
               <li className="list-group-item">
-                <strong>Rating:</strong>Film Rating
+                <strong>Rated: </strong>{film.Rated}
               </li>
               <li className="list-group-item">
-                <strong>Director:</strong>Film Director
+                <strong>Rating: </strong>{film.imdbRating}
               </li>
               <li className="list-group-item">
-                <strong>Writer:</strong>Film Writer
+                <strong>Director: </strong>{film.Director}
               </li>
               <li className="list-group-item">
-                <strong>Actors:</strong>Film Actors
+                <strong>Writer: </strong>{film.Writer}
+              </li>
+              <li className="list-group-item">
+                <strong>Actors: </strong>{film.Actors}
+              </li>
+              <li className="list-group-item">
+                <strong>Awards: </strong>{film.Awards}
+              </li>
+              <li className="list-group-item">
+                <strong>BoxOffice: </strong>{film.BoxOffice}
+              </li>
+              <li className="list-group-item">
+                <strong>Language: </strong>{film.Language}
+              </li>
+              <li className="list-group-item">
+                <strong>Country: </strong>{film.Country}
+              </li>
+              <li className="list-group-item">
+                <strong>BoxOffice: </strong>{film.BoxOffice}
               </li>
             </ul>
           </div>
@@ -46,18 +66,22 @@ export class FilmDetails extends Component {
         <div className="row">
           <div className="card card-body bg-dark my-5 text-light">
             <div className="col-md-12">
-              <h3>About</h3>About the Film
+              {/* <h3>About</h3>{film.Plot} */}
               <hr />
               <a href="" target="_blank" rel="noopener noreferrer" className="btn btn-dark">
                 View ON IMDB
-              </a>
-              <a href="" target="_blank" rel="noopener noreferrer" className="btn btn-default btn-dark">
+            </a>
+              <Link to="/" target="_blank" rel="noopener noreferrer" className="btn btn-default btn-dark">
                 Go to Search
-              </a>
+            </Link>
             </div>
           </div>
         </div>
-      </>
+      </div>);
+
+    let content = loading ? '' : filmContent;
+    return (
+      <div>{content}</div>
     );
   }
 }
@@ -67,4 +91,4 @@ const mapStateToProps = (state) => ({
   film: state.films.film,
 });
 
-export default connect(mapStateToProps, { fetchFilmDetails })(FilmDetails);
+export default connect(mapStateToProps, { fetchFilmDetails, setLoading })(FilmDetails);
