@@ -3,13 +3,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SearchForm from './SearchForm';
 import FilmContainer from './FilmContainer';
-export class Home extends Component { // eslint-disable
+export class Home extends Component { 
   render() {
     const { loading } = this.props;
 
     return (
       <div className="container">
-        <SearchForm />
+        <SearchForm />    
         {loading ? '' : <FilmContainer />}
       </div>
     );
