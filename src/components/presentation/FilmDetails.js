@@ -64,15 +64,15 @@ export class FilmDetails extends Component {
           </div>
         </div>
         <div className="row">
-          <div className="card card-body bg-dark my-5 text-light">
+          <div className="mb-5 text-light">
             <div className="col-md-12">
               {/* <h3>About</h3>{film.Plot} */}
               <hr />
-              <a href="" target="_blank" rel="noopener noreferrer" className="btn btn-dark">
+              <a href="" target="_blank" rel="noopener noreferrer" className="btn mx-5 mt-2 btn-dark">
                 View ON IMDB
             </a>
-              <Link to="/" target="_blank" rel="noopener noreferrer" className="btn btn-default btn-dark">
-                Go to Search
+              <Link to="/" rel="noopener noreferrer" className="btn mx-3 btn-default btn-dark">
+                Go Back to Search
             </Link>
             </div>
           </div>

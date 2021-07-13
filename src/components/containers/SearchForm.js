@@ -35,7 +35,7 @@ const SearchForm = (props) => {
         <form id="searchForm" onSubmit={onSubmit}>
           <input onChange={onChange} type="text" className="form-control" name="searchText" placeholder="Search Films . . ." />
           <FilterFilm handleFilterChange={handleFilterChange} />
-          <button type="submit" className="btn btn-primary btn-bg mt-3">Search</button>
+          <button type="submit" className="btn btn-dark w-25 btn-bg mb-3">Search</button>
         </form>
       </div>
     </div>
