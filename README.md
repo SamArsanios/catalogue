@@ -45,7 +45,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - To Microverse for their `README` template.
-- [https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
+- To Beehance (https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
 
 Design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 
