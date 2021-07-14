@@ -6,7 +6,7 @@ A movie catalogue app where you can search for all your favourite movies.
 
 This app is a catalogue of films where the user can search for his favorite films and apply filters on their search. Every film has a details page that the user can access by clicking on the title and see the of the fillm he or she is interested in.
 
-<!-- ![](./docs/screenshot.png) -->
+![](./src/assets/screenshot.jpg)
 
 ## Built With
 
@@ -47,7 +47,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - To Microverse for their `README` template.
-- To [OMDB] for the API(https://omdbapi.com/)
+- [To OMDB for the API](https://omdbapi.com/)
 - [To Beehance](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
 - Design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 
