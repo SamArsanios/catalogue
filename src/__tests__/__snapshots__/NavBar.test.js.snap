@@ -29,9 +29,7 @@ exports[`renders correctly 1`] = `
             className="navbar-brand text-white text-lg brand-text"
             href="/search"
             onClick={[Function]}
-          >
-            Search
-          </a>
+          />
         </li>
       </ul>
     </div>

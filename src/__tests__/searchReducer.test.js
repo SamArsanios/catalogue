@@ -13,6 +13,7 @@ test('initialState to be as expected', () => {
     films: [],
     loading: false,
     film: [],
+    initialScreen: true,
   });
 });
 

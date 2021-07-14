@@ -31,9 +31,7 @@ Object {
                 <a
                   class="navbar-brand text-white text-lg brand-text"
                   href="/search"
-                >
-                  Search
-                </a>
+                />
               </li>
             </ul>
           </div>
@@ -54,7 +52,6 @@ Object {
               <i
                 class="fa fa-search"
               />
-               
               Search Films
             </h1>
             <form
@@ -94,14 +91,13 @@ Object {
               >
                 Search
               </button>
+              <div
+                class="row"
+              />
             </form>
           </div>
         </div>
-        <div
-          class="row"
-        >
-          Sorry, Film not available
-        </div>
+        
       </div>
     </div>
   </body>,
@@ -132,9 +128,7 @@ Object {
               <a
                 class="navbar-brand text-white text-lg brand-text"
                 href="/search"
-              >
-                Search
-              </a>
+              />
             </li>
           </ul>
         </div>
@@ -155,7 +149,6 @@ Object {
             <i
               class="fa fa-search"
             />
-             
             Search Films
           </h1>
           <form
@@ -195,14 +188,13 @@ Object {
             >
               Search
             </button>
+            <div
+              class="row"
+            />
           </form>
         </div>
       </div>
-      <div
-        class="row"
-      >
-        Sorry, Film not available
-      </div>
+      
     </div>
   </div>,
   "debug": [Function],

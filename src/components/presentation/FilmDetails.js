@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { fetchFilmDetails, setLoading } from '../../actions/index';
 
-// export class FilmDetails extends Component {
 const FilmDetails = (props) => {
   useEffect(() => {
     props.fetchFilmDetails(props.match.params.id);

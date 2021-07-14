@@ -10,7 +10,7 @@ const NavBar = () => (
         </div>
         <ul className="navbar-nav ml-auto text-light d-inline-block">
           <li className="nav-item d-inline-block mr-4">
-            <Link className="navbar-brand text-white text-lg brand-text" to="/search">Search</Link>
+            <Link className="navbar-brand text-white text-lg brand-text" to="/search" />
           </li>
         </ul>
       </div>
