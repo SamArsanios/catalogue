@@ -97,7 +97,9 @@ Object {
             </form>
           </div>
         </div>
-        
+        <div
+          class="row"
+        />
       </div>
     </div>
   </body>,
@@ -194,7 +196,9 @@ Object {
           </form>
         </div>
       </div>
-      
+      <div
+        class="row"
+      />
     </div>
   </div>,
   "debug": [Function],
