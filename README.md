@@ -47,8 +47,8 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - To Microverse for their `README` template.
-- [To OMDB for the API](https://omdbapi.com/)
-- [To Beehance](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
+- [To OMDB](https://omdbapi.com/) for the API.
+- [To Beehance](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) for design guide.
 - Design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 
 ## 📝 [License]
