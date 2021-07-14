@@ -2,7 +2,7 @@ import {
   SEARCH_FILM, FETCH_FILMS, FETCH_FILM_DETAILS, LOADING,
 } from '../actions/constants';
 
-const initialState = {
+export const initialState = {
   text: '',
   films: [],
   loading: false,
