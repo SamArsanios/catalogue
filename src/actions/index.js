@@ -13,7 +13,7 @@ const searchFilm = (text) => (dispatch) => {
 };
 
 const fetchFilms = (text) => (dispatch) => {
-  axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&s=${text}`)
+  axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&s=${text}`)
     .then((response) => dispatch({
       type: FETCH_FILMS,
       payload: response.data,
@@ -22,7 +22,7 @@ const fetchFilms = (text) => (dispatch) => {
 };
 
 const fetchFilmDetails = (id) => (dispatch) => {
-  axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&i=${id}`)
+  axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&i=${id}`)
     .then((response) => dispatch({
       type: FETCH_FILM_DETAILS,
       payload: response.data,
