@@ -9,7 +9,6 @@ const FilmContainer = (props) => {
   const filterFilms = (films, filter) => (filter === 'All' ? films.Search
     : films.Search.filter((film) => film.Type === filter));
 
-  console.log(films);
   const filteredFilms = filterFilms(films, filter);
 
   let content = '';
