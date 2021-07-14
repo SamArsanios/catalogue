@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { fetchFilmDetails, setLoading } from '../../actions/index';
+import Spinner from './Spinner';
 
 const FilmDetails = (props) => {
   useEffect(() => {
@@ -30,6 +31,10 @@ const FilmDetails = (props) => {
               {film.Genre}
             </li>
             <li className="list-group-item">
+              <strong>Runtime: </strong>
+              {film.Runtime}
+            </li>
+            <li className="list-group-item">
               <strong>Released: </strong>
               {film.Released}
             </li>
@@ -42,6 +47,10 @@ const FilmDetails = (props) => {
               {film.imdbRating}
             </li>
             <li className="list-group-item">
+              <strong>Actors: </strong>
+              {film.Actors}
+            </li>
+            <li className="list-group-item">
               <strong>Director: </strong>
               {film.Director}
             </li>
@@ -50,16 +59,12 @@ const FilmDetails = (props) => {
               {film.Writer}
             </li>
             <li className="list-group-item">
-              <strong>Actors: </strong>
-              {film.Actors}
+              <strong>Production: </strong>
+              {film.Production}
             </li>
             <li className="list-group-item">
               <strong>Awards: </strong>
               {film.Awards}
-            </li>
-            <li className="list-group-item">
-              <strong>BoxOffice: </strong>
-              {film.BoxOffice}
             </li>
             <li className="list-group-item">
               <strong>Language: </strong>
@@ -92,7 +97,7 @@ const FilmDetails = (props) => {
     </div>
   );
 
-  const content = loading ? '' : filmContent;
+  const content = loading ? <Spinner /> : filmContent;
   return (
     <div>{content}</div>
   );

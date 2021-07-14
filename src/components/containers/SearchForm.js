@@ -5,11 +5,11 @@ import {
   searchFilm, fetchFilms, setLoading, filterFilm,
 } from '../../actions/index';
 import FilterFilm from '../presentation/FilterFilm';
-import FilmContainer from './FilmContainer';
+// import FilmContainer from './FilmContainer';
 
 const SearchForm = (props) => {
   const { filterFilm } = props;
-  let initialScreen = true;
+  // let initialScreen = true;
 
   const onChange = (e) => {
     props.searchFilm(e.target.value);
@@ -19,7 +19,7 @@ const SearchForm = (props) => {
     e.preventDefault();
     props.fetchFilms(props.text);
     props.setLoading();
-    initialScreen = false;
+    // initialScreen = false;
   };
 
   const handleFilterChange = (e) => {
@@ -37,7 +37,7 @@ const SearchForm = (props) => {
           <input onChange={onChange} type="text" className="form-control" name="searchText" placeholder="Search Films . . ." />
           <FilterFilm handleFilterChange={handleFilterChange} />
           <button type="submit" className="btn btn-dark w-25 btn-bg mb-3">Search</button>
-          {initialScreen ? <FilmContainer /> : ''}
+          {/* {initialScreen ? <FilmContainer /> : ''} */}
         </form>
       </div>
     </div>

@@ -91,9 +91,6 @@ Object {
               >
                 Search
               </button>
-              <div
-                class="row"
-              />
             </form>
           </div>
         </div>
@@ -190,9 +187,6 @@ Object {
             >
               Search
             </button>
-            <div
-              class="row"
-            />
           </form>
         </div>
       </div>
