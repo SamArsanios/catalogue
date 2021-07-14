@@ -6,6 +6,7 @@ export const initialState = {
   text: '',
   films: [],
   loading: false,
+  initialScreen: true,
   film: [],
 };
 

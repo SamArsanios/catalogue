@@ -4,13 +4,13 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import PropTypes from 'prop-types';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import App from '../App';
 import { rootReducer } from '../reducers/index';
-import { composeWithDevTools } from 'redux-devtools-extension';
 
 const state = {};
 const middleware = [thunk];
-const store = createStore(rootReducer, state, composeWithDevTools(applyMiddleware(...middleware)),);
+const store = createStore(rootReducer, state, composeWithDevTools(applyMiddleware(...middleware)));
 const Wrapper = ({ children }) => (
   <Provider store={store}>{children}</Provider>
 );

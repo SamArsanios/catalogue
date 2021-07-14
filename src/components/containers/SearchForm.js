@@ -1,51 +1,65 @@
-/* eslint-disable */
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { searchFilm, fetchFilms, setLoading } from '../../actions/index';
+import {
+  searchFilm, fetchFilms, setLoading, filterFilm,
+} from '../../actions/index';
 import FilterFilm from '../presentation/FilterFilm';
-import { filterFilm } from '../../actions/index';
-// class SearchForm extends Component {
-const SearchForm = (props) => {
+import FilmContainer from './FilmContainer';
+// import Spinner from '../presentation/Spinner';
 
+const SearchForm = (props) => {
   const { filterFilm } = props;
-  // state = {}
+  let initialScreen = true;
+
   const onChange = (e) => {
-    props.searchFilm(e.target.value);//eslint-disable
-  }
+    props.searchFilm(e.target.value);
+  };
 
   const onSubmit = (e) => {
     e.preventDefault();
-    props.fetchFilms(props.text);//eslint-disable
+    props.fetchFilms(props.text);
     props.setLoading();
-  }
+    initialScreen = false;
+  };
 
   const handleFilterChange = (e) => {
     const filter = e.target.value;
     filterFilm(filter);
   };
-  // render() {
   return (
     <div className="jumbotron jumbotron-fluid mt-5 text-center">
       <div className="container">
         <h1 className="display-4 mb-3">
           <i className="fa fa-search" />
-          {' '}
-            Search Films
-          </h1>
+          Search Films
+        </h1>
         <form id="searchForm" onSubmit={onSubmit}>
           <input onChange={onChange} type="text" className="form-control" name="searchText" placeholder="Search Films . . ." />
           <FilterFilm handleFilterChange={handleFilterChange} />
           <button type="submit" className="btn btn-dark w-25 btn-bg mb-3">Search</button>
+          {initialScreen ? <FilmContainer /> : ''}
         </form>
       </div>
     </div>
   );
-  // }
-}
+};
 
 const mapStateToProps = (state) => ({
   text: state.films.text,
 });
 
+SearchForm.propTypes = {
+  searchFilm: PropTypes.func.isRequired,
+  fetchFilms: PropTypes.func.isRequired,
+  setLoading: PropTypes.func.isRequired,
+  filterFilm: PropTypes.func.isRequired,
+  text: PropTypes.string,
+};
 
-export default connect(mapStateToProps, { searchFilm, fetchFilms, setLoading, filterFilm })(SearchForm);
+SearchForm.defaultProps = {
+  text: 'false',
+};
+export default connect(mapStateToProps, {
+  searchFilm, fetchFilms, setLoading, filterFilm,
+})(SearchForm);

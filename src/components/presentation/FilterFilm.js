@@ -1,7 +1,5 @@
-/* eslint-disable */
-// import { render } from '@testing-library/react';
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const FilterFilm = (props) => {
   const { handleFilterChange } = props;
@@ -29,8 +27,8 @@ const FilterFilm = (props) => {
   );
 };
 
-// CategoryFilter.propTypes = {
-//   handleFilterChange: PropTypes.func.isRequired,
-// };
+FilterFilm.propTypes = {
+  handleFilterChange: PropTypes.func.isRequired,
+};
 
 export default FilterFilm;

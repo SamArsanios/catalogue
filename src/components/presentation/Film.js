@@ -1,7 +1,7 @@
-/* eslint-disable */
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-// export class Film extends Component {
+import PropTypes from 'prop-types';
+
 const Film = (props) => {
   const { film } = props;
   return (
@@ -10,20 +10,24 @@ const Film = (props) => {
         <img className="w-100 mb-2" src={film.Poster} alt="Film Cover" />
         <h5 className="text-light card-title">
           {film.Title}
-              -
-              {film.Year}
+          -
+          {film.Year}
         </h5>
-        <Link className="btn btn-warning mt-auto" to={'/film/' + film.imdbID}>
+        <Link className="btn btn-warning mt-auto" to={`/film/${film.imdbID}`}>
           Film Details
-              <i className="fas fa-chevron-right" />
+          <i className="fas fa-chevron-right" />
         </Link>
-        {/* <span className="btn btn-warning mt-auto">
-            Film Details
-              <i className="fas fa-chevron-right" />
-          </span>  */}
       </div>
     </div>
   );
+};
+
+Film.propTypes = {
+  film: PropTypes.arrayOf(PropTypes.object),
+};
+
+Film.defaultProps = {
+  film: [],
 };
 
 export default Film;
