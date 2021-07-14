@@ -1,6 +1,6 @@
 import { FILTER_FILM } from '../actions/constants';
 
-const initialState = {
+export const initialState = {
   filter: 'All',
 };
 

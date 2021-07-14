@@ -9,7 +9,7 @@ import filmFilterReducer from './filterReducer';
 const middleware = [thunk];
 const initialState = {};
 
-const rootReducer = combineReducers({ films: searchReducer, filter: filmFilterReducer });
+export const rootReducer = combineReducers({ films: searchReducer, filter: filmFilterReducer });
 // export default combineReducers({ films: searchReducer });
 const store = createStore(
   rootReducer,
