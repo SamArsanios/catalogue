@@ -6,7 +6,6 @@ import {
 } from '../../actions/index';
 import FilterFilm from '../presentation/FilterFilm';
 import FilmContainer from './FilmContainer';
-// import Spinner from '../presentation/Spinner';
 
 const SearchForm = (props) => {
   const { filterFilm } = props;
