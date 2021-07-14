@@ -1,16 +1,17 @@
-/* eslint-disable */
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import SearchForm from './SearchForm';
 import FilmContainer from './FilmContainer';
-// export class Home extends Component {
+import Spinner from '../presentation/Spinner';
+
 const Home = (props) => {
   const { loading } = props;
 
   return (
     <div className="container">
       <SearchForm />
-      {loading ? '' : <FilmContainer />}
+      {loading ? <Spinner /> : <FilmContainer />}
     </div>
   );
 };
@@ -18,5 +19,13 @@ const Home = (props) => {
 const mapStateToProps = (state) => ({
   loading: state.films.loading,
 });
+
+Home.propTypes = {
+  loading: PropTypes.bool,
+};
+
+Home.defaultProps = {
+  loading: false,
+};
 
 export default connect(mapStateToProps)(Home);

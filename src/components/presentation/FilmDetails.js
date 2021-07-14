@@ -66,9 +66,8 @@ export class FilmDetails extends Component {
         <div className="row">
           <div className="mb-5 text-light">
             <div className="col-md-12">
-              {/* <h3>About</h3>{film.Plot} */}
               <hr />
-              <a href="" target="_blank" rel="noopener noreferrer" className="btn mx-5 mt-2 btn-dark">
+              <a href={"https://www.imdb.com/title/" + film.imdbID} target="_blank" rel="noopener noreferrer" className="btn mx-5 mt-2 btn-dark">
                 View ON IMDB
             </a>
               <Link to="/" rel="noopener noreferrer" className="btn mx-3 btn-default btn-dark">
