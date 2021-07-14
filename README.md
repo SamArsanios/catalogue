@@ -2,22 +2,23 @@
 
 # Calculator App
 
-A calculator app where you can calculate the 4 basic Math operations for a company called Math Magicians.
+A movie catalogue app where you can search for all your favourite movies.
 
 <!-- ![](./docs/screenshot.png) -->
 
 ## Built With
 
 - React.js
+- Redux
 
-## [Live Link](https://sam-calculator-app.herokuapp.com/)
+## [Live Link](https://sams-catalgoue.herokuapp.com/)
 
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
 - `git clone git@github.com:SamArsanios/calculator-app.git`
-- `cd calculator`
+- `cd catalogue`
 - `npm install`
 - `npm start`
 
@@ -44,6 +45,9 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - To Microverse for their `README` template.
+- [https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
+
+Design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 
 ## 📝 [License]
 
