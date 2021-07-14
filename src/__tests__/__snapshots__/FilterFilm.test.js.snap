@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <select
+    aria-label="Default select example"
+    className="form-select my-5"
+  >
+    <option
+      value="All"
+    >
+      All
+    </option>
+    <option
+      value="movie"
+    >
+      movie
+    </option>
+    <option
+      value="series"
+    >
+      series
+    </option>
+  </select>
+</div>
+`;
