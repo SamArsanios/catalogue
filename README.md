@@ -4,7 +4,7 @@
 
 A movie catalogue app where you can search for all your favourite movies.
 
-This app is a catalogue of films where the user can search for his favorite films and apply filters on their search. Every film has a details page that the user can access by clicking on the title and see the of the fillm he or she is interested in.
+This app is a catalogue of films where the user can search for their favorite films and apply filters on their search. Every film has a details page that the user can access by clicking on the Find Details button and see the details of the film they are interested in.
 
 ![](./src/assets/screenshot.jpg)
 
