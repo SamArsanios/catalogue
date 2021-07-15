@@ -19,7 +19,7 @@ Wrapper.propTypes = {
   children: PropTypes.shape({}).isRequired,
 };
 
-describe('Film', () => {
+describe('Home', () => {
   it('renders correctly', () => {
     const tree = render(<Home />, { wrapper: Wrapper });
     expect(tree).toMatchSnapshot();

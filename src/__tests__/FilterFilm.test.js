@@ -1,13 +1,27 @@
-import { BrowserRouter } from 'react-router-dom';
-import { create } from 'react-test-renderer';
+import React from 'react';
+import { render } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import PropTypes from 'prop-types';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import FilterFilm from '../components/presentation/FilterFilm';
+import { rootReducer } from '../reducers/index';
 
-test('renders correctly', () => {
-  const Placeholder = () => (
-    <BrowserRouter>
-      <FilterFilm />
-    </BrowserRouter>
-  );
-  const tree = create(<Placeholder />).toJSON();
-  expect(tree).toMatchSnapshot();
+const state = {};
+const middleware = [thunk];
+const store = createStore(rootReducer, state, composeWithDevTools(applyMiddleware(...middleware)));
+const Wrapper = ({ children }) => (
+  <Provider store={store}>{children}</Provider>
+);
+
+Wrapper.propTypes = {
+  children: PropTypes.shape({}).isRequired,
+};
+
+describe('FilterFilm', () => {
+  it('renders correctly', () => {
+    const tree = render(<FilterFilm handleFilterChange={() => { }} />, { wrapper: Wrapper });
+    expect(tree).toMatchSnapshot();
+  });
 });
