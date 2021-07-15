@@ -18,7 +18,7 @@ const fetchFilms = (text) => (dispatch) => {
       type: FETCH_FILMS,
       payload: response.data,
     }))
-    .catch((error) => (console.log(error)));
+    .catch((error) => (error));
 };
 
 const fetchFilmDetails = (id) => (dispatch) => {
@@ -27,7 +27,7 @@ const fetchFilmDetails = (id) => (dispatch) => {
       type: FETCH_FILM_DETAILS,
       payload: response.data,
     }))
-    .catch((error) => (console.log(error)));
+    .catch((error) => (error));
 };
 
 const setLoading = () => ({
