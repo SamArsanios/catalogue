@@ -1,12 +1,5 @@
 import searchReducer, { initialState } from '../reducers/searchReducer';
 
-// export const initialState = {
-//   text: '',
-//   films: [],
-//   loading: false,
-//   film: [],
-// };
-
 test('initialState to be as expected', () => {
   expect(initialState).toEqual({
     text: '',

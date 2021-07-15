@@ -1,11 +1,7 @@
 import filmFilterReducer, { initialState } from '../reducers/filterReducer';
 
 test('initialState to be as expected', () => {
-  // const defaultState = {
-  //   filter: 'All',
-  // };
   expect(initialState).toEqual({
-    // current: 'All',
     filter: 'All',
   });
 });
