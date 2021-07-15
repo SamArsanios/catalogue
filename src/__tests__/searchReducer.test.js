@@ -48,3 +48,64 @@ test('searchReducer can FETCH_FILM_DETAILS', () => {
     loading: false,
   });
 });
+
+test('searchReducer can initiate LOADING', () => {
+  const action = {
+    type: 'LOADING',
+    payload: true,
+  };
+  expect(searchReducer(initialState, action)).toEqual({
+    ...initialState,
+    loading: action.payload,
+  });
+});
+
+test('searchReducer doesn\'t search film when given wrong action ', () => {
+  const action = {
+    type: 'random type',
+    payload: 'some films',
+    loading: false,
+  };
+  expect(searchReducer(initialState, action)).not.toEqual({
+    ...initialState,
+    text: action.payload,
+    loading: false,
+  });
+});
+
+test('searchReducer doesn\'t fetch films when given wrong action ', () => {
+  const action = {
+    type: 'random action type',
+    films: 'some films',
+    loading: false,
+  };
+  expect(searchReducer(initialState, action)).not.toEqual({
+    ...initialState,
+    films: action.film,
+    loading: false,
+  });
+});
+
+test('searchReducer doesn\'t fetch films details when given wrong action ', () => {
+  const action = {
+    type: 'wrong action type',
+    payload: 'some films',
+    loading: false,
+  };
+  expect(searchReducer(initialState, action)).not.toEqual({
+    ...initialState,
+    film: action.payload,
+    loading: false,
+  });
+});
+
+test('searchReducer doesn\'t load when given wrong action', () => {
+  const action = {
+    type: 'wrong action type',
+    payload: true,
+  };
+  expect(searchReducer(initialState, action)).not.toEqual({
+    ...initialState,
+    loading: action.payload,
+  });
+});
