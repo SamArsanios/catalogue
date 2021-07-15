@@ -111,15 +111,15 @@ const mapStateToProps = (state) => ({
 FilmDetails.propTypes = {
   fetchFilmDetails: PropTypes.func.isRequired,
   setLoading: PropTypes.func.isRequired,
-  film: PropTypes.arrayOf(PropTypes.object),
+  film: PropTypes.instanceOf(Object),
   loading: PropTypes.bool,
-  match: PropTypes.number,
+  match: PropTypes.instanceOf(Object),
 };
 
 FilmDetails.defaultProps = {
   film: [],
   loading: false,
-  match: '',
+  match: 0,
 };
 
 export default connect(mapStateToProps, { fetchFilmDetails, setLoading })(FilmDetails);

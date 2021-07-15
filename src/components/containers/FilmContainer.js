@@ -27,7 +27,7 @@ const mapStateToProps = (state) => ({
 });
 
 FilmContainer.propTypes = {
-  films: PropTypes.arrayOf(PropTypes.object),
+  films: PropTypes.instanceOf(Object),
   filter: PropTypes.string,
 };
 

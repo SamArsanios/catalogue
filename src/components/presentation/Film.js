@@ -23,7 +23,7 @@ const Film = (props) => {
 };
 
 Film.propTypes = {
-  film: PropTypes.arrayOf(PropTypes.object),
+  film: PropTypes.instanceOf(Object),
 };
 
 Film.defaultProps = {
