@@ -13,7 +13,7 @@ const FilmContainer = (props) => {
 
   let content = '';
   content = films.Response === 'True'
-    ? filteredFilms.map((film) => <Film key={film.id} film={film} />) : '';
+    ? filteredFilms.map((film) => <Film key={film.imdbID} film={film} />) : '';
   return (
     <div className="row">
       {content}
