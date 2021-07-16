@@ -8,6 +8,7 @@ export const initialState = {
   loading: false,
   initialScreen: true,
   film: [],
+  page: 1,
 };
 
 const searchReducer = (state = initialState, action) => {

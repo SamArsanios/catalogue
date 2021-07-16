@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import SearchForm from './SearchForm';
 import FilmContainer from './FilmContainer';
 import Spinner from '../presentation/Spinner';
+import Pagination from '../presentation/Pagination';
 
 const Home = (props) => {
   const { loading } = props;
@@ -12,6 +13,7 @@ const Home = (props) => {
     <div className="container">
       <SearchForm />
       {loading ? <Spinner /> : <FilmContainer />}
+      <Pagination />
     </div>
   );
 };

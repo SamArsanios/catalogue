@@ -10,7 +10,7 @@ const SearchForm = (props) => {
   const { filterFilm } = props;
 
   useEffect(() => {
-    props.fetchFilms('2020');
+    props.fetchFilms('2021');
   }, []);
 
   const onChange = (e) => {
