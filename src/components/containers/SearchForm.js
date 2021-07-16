@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
@@ -9,13 +9,21 @@ import FilterFilm from '../presentation/FilterFilm';
 const SearchForm = (props) => {
   const { filterFilm } = props;
 
+  useEffect(() => {
+    props.fetchFilms('2021');
+  }, []);
+
   const onChange = (e) => {
     props.searchFilm(e.target.value);
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
-    props.fetchFilms(props.text);
+    if (props.text === '') {
+      props.fetchFilms('2021');
+    } else {
+      props.fetchFilms(props.text);
+    }
     props.setLoading();
   };
 
@@ -58,3 +66,4 @@ SearchForm.defaultProps = {
 export default connect(mapStateToProps, {
   searchFilm, fetchFilms, setLoading, filterFilm,
 })(SearchForm);
+
