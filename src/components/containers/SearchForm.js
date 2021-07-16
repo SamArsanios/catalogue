@@ -10,7 +10,7 @@ const SearchForm = (props) => {
   const { filterFilm } = props;
 
   useEffect(() => {
-    props.fetchFilms('2021');
+    props.fetchFilms('2020');
   }, []);
 
   const onChange = (e) => {
@@ -66,4 +66,3 @@ SearchForm.defaultProps = {
 export default connect(mapStateToProps, {
   searchFilm, fetchFilms, setLoading, filterFilm,
 })(SearchForm);
-
