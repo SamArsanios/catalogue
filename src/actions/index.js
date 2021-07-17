@@ -12,14 +12,18 @@ const searchFilm = (text) => (dispatch) => {
   });
 };
 
-const fetchFilms = (text) => (dispatch) => {
-  axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&s=${text}`)
+const fetchFilms = (text, page = 1) => (dispatch) => {
+  axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&s=${text}&page=${page}`)
     .then((response) => dispatch({
       type: FETCH_FILMS,
       payload: response.data,
     }))
     .catch((error) => (error));
 };
+
+// const changePage = (page) => (dispatch) => {
+
+// }
 
 const fetchFilmDetails = (id) => (dispatch) => {
   axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&i=${id}`)

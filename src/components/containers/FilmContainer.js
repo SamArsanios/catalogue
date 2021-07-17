@@ -11,6 +11,8 @@ const FilmContainer = (props) => {
 
   const filteredFilms = filterFilms(films, filter);
 
+  console.log(films);
+
   let content = '';
   content = films.Response === 'True'
     ? filteredFilms.map((film) => <Film key={film.imdbID} film={film} />) : '';
