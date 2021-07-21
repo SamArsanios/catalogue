@@ -10,7 +10,7 @@ This app is a catalogue of films where the user can search for their favorite fi
 
 ## Built With
 
-- React.js
+- React
 - Redux
 
 ## [Live Link](https://sams-catalgoue.herokuapp.com/)
