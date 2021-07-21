@@ -19,7 +19,7 @@ This app is a catalogue of films where the user can search for their favorite fi
 
 To get a local copy up and running follow these simple example steps.
 
-- `git clone git@github.com:SamArsanios/calculator-app.git`
+- `git clone git@github.com:SamArsanios/catalogue.git`
 - `cd catalogue`
 - `npm install`
 - `npm start`
