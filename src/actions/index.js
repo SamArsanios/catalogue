@@ -21,10 +21,6 @@ const fetchFilms = (text, page = 1) => (dispatch) => {
     .catch((error) => (error));
 };
 
-// const changePage = (page) => (dispatch) => {
-
-// }
-
 const fetchFilmDetails = (id) => (dispatch) => {
   axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&i=${id}`)
     .then((response) => dispatch({
